@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container,Row, Col } from 'react-bootstrap';
+import Cards from './Components/Cards';
+import Header from './Components/Header';
+import Lsbox from './Components/Lsbox';
+import Rsbox from './Components/Rsbox';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+
+    <Header />
+    <Container style={{marginTop:'10px'}}>
+      <Row>
+      <Col sm={6} lg={9}>
+        <Lsbox />
+      </Col>  
+      <Col sm={6} lg={3}>
+        <Rsbox />
+      </Col>
+      </Row>
+    </Container>
+
+    <Container style={{marginTop:'25px'}}>
+      <Cards />
+    </Container>
+
+
+
     </div>
   );
 }
